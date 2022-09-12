@@ -1,0 +1,343 @@
+.App {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  min-height:100vh;
+  display:flex;
+  flex-direction: column;
+}
+
+#banner{
+  width:70%;
+  height:170px;
+  align-self: center;
+  background-image: url("https://envato-shoebox-0.imgix.net/846c/a0fa-da7a-4034-b9fb-2f2c4cabbf9a/Orange+tourist+tent+illuminated+from+inside+stands+in+mountains+above+clouds.jpg?auto=compress%2Cformat&fit=max&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark2.png&markalign=center%2Cmiddle&markalpha=18&w=900&s=0d054b5d9c35ad132fa014cc7671cad8");
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+#banner > p{
+  font-size: 2rem;
+  text-align: center;
+}
+
+#cartItemImage{
+  height:100%;
+  margin: 0 auto;
+  
+  float:left;
+}
+table{
+  border-collapse:collapse;
+  margin:0 auto;
+  width:100%;
+  margin-top: 3rem;
+}
+tr {
+  border-bottom: 1px solid #dddddd;
+}
+td >div{
+  height:10rem;
+  width:10rem;
+  overflow:hidden;
+  border:1px solid #dddddd;
+  background-color: white;
+  display:flex;
+  margin-top: 10px;
+  margin-bottom:10px;
+  justify-content: center;
+}
+#checkout{
+  width:100%;
+  display: flex;
+  margin:0 auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+#checkout > p {
+  width:100%;
+  text-align: right;
+}
+#checkoutBtn {
+  width:8rem;
+  border:1px solid black;
+  background-color: #202842;
+  border-radius: 5px;
+  border:none;
+  color:white;
+  padding:1rem 0;
+  cursor: pointer;
+  margin-left: 3rem;
+
+}  #checkoutBtn:hover{
+    background-color:#2f3b61;
+    box-shadow: 5px 5px 8px #888888;
+    transition:0.5s;
+}
+
+@media screen and (max-width: 800px){
+  .App{
+    font-size: 20px;
+  }
+}
+.paginationContainer{
+  width:100%;
+  margin-top:5vh;
+
+}
+.paginationItem, .prev, .next{
+  margin:0 1px;
+  padding:10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  border:0px;
+}
+.paginationItem, .prev, .next:hover{
+  cursor:pointer;
+}
+.paginationItem.active{
+  background-color: #202842;
+  color:white;
+}
+.paginationItem.active:hover{
+  cursor: default;
+}
+.prev.disabled,
+.next.disabled{
+  pointer-events: none;
+  visibility: hidden;
+}
+.markAsCompleteBtn{
+  color:green;
+  border:none;
+  font-size: 1.2rem;
+}
+.markAsCompleteBtn:hover{
+  cursor: pointer;
+}
+.removeFromCartBtn{
+  border:none;
+}
+.removeFromCartBtn:hover{
+  cursor: pointer;
+}
+.productListItem{
+  width:98%;
+  height:70%;
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  background-color:white;
+  
+  @media screen and (max-width:800px){
+      width:100%;
+      height:250px;
+  }
+}
+.productPriceLinkContainer{
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+}
+.productListLink{
+  margin-left:auto;
+  text-decoration:none;
+  background-color:#202842;
+  color:white;
+  padding:8px;
+  border-radius:25% 10%;
+  box-shadow:2px 3px 15px #888888;
+  margin-right:10px;  
+}
+.productListLink:hover{
+      background-color:#2f3b61;
+      transition:0.5s;
+  }
+.productListImage{
+  width:100%;
+  height:80%;
+  margin-top: auto;
+  display:flex;
+  object-fit:contain;
+}
+.productContainer{
+  height:500px;
+  width:20%;
+  flex-direction:column;
+  background-color:white;
+  margin-right:7%;
+  overflow:hidden; 
+  @media screen and (max-width:800px){
+      width:100%;
+      height:250px;
+  }
+}
+h3 {
+  text-align:left;
+  max-width:20ch;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#productImg{
+  width:35%;
+  mix-blend-mode: multiply;
+  float:left;
+  @media screen and (max-width:800px){
+      width:55%;
+      float:none;
+      margin:0 auto;
+  }
+}
+
+#productDetails {
+  width:55%;
+  margin-left:5rem;
+  margin-bottom:0px;
+  @media screen and (max-width:800px){
+    width:75%;
+  }
+}
+
+p{
+  text-align:left;
+}
+
+#productTitle{
+  text-align:left;
+}
+
+#addToCartBtn{
+  background-color:#f7ca4d;
+  display:inline;
+  padding:1rem 1rem;
+  border:1px solid #CCC;
+  border-radius:7.5px;
+  cursor:pointer;
+  
+  @media screen and (max-width:800px){
+      max-width:10rem;
+      padding:1rem 1rem;
+      font-size:20px;
+  }
+}
+#addToCartBtn:hover{
+      background-color:#fce092;
+}
+
+#productPrice{  
+  display:inline;     
+  margin-right:1rem;
+  font-size:20px;
+}
+#priceCartContent {
+  margin-top:2rem;
+  width:100%;
+  display:inline-block;
+  text-align:left;
+  @media screen and (max-width: 800px){
+      text-align:center;
+  }
+}
+
+#closeAlert {
+  cursor:pointer;
+  position:absolute;
+  top:5px;
+  right:5px;      
+}
+
+#menu-wrapper{
+  width:100%;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  display:flex;
+  list-style-type: none;
+  flex-direction:row;
+  padding:0;
+  align-items:center;
+  height:100%;
+  
+  @media screen and (max-width:500px){
+      flex-direction: column;
+  }
+
+}
+
+#menu-wrapper > li{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color:black;
+  width:10%;
+  height:100%;
+  float:left;
+  
+
+  @media screen and (max-width: 800px){
+      font-size: 1rem;
+      padding-left:20px;
+  }
+}
+#menu-wrapper > .searchBarContainer{
+  margin:1vh;
+  width:80%;
+  display:flex;
+  align-items:center;
+  height:50px;
+  border-radius:5px;
+  overflow:hidden;
+}
+
+#menu-wrapper > .searchBarContainer:focus-within{
+  margin:1vh;
+      width:80%;
+      display:flex;
+      align-items:center;
+      outline:4px solid #b38a10;
+      transition: 0.2s
+}
+#searchBar{
+  align-items:center;
+  font-size:1.2rem;
+  width:100%;
+  border:none;
+  height:100%;
+}
+#searchBar:focus{
+  outline:none;
+}
+#searchButton{
+  background-color:white;
+  font-size:1.2rem;
+  height:100%;
+  padding:0.5rem;
+  border-left:1px solid #c9c9c9;
+}
+#searchButton:hover{
+  cursor: pointer;
+}
+
+#menu-wrapper > .faIcon{
+  font-size:2rem;
+}
+
+.navLink{
+  color:white;
+  width:100%auto;
+  height:100%;
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+  justify-content:center;
+
+  @media screen and (max-width: 800px){
+      font-size: 4rem;
+  }
+}
+
+.navLink:hover{
+  cursor:pointer;
+  background-color:#181e30;
+  transition:0.5s;
+}
